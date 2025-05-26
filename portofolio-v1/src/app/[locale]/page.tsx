@@ -1,41 +1,38 @@
-'use client'
+'use client';
 
-import { ThemeSwitcher } from '@/components/ThemeSwitcher'
-import { motion } from 'framer-motion'
-import {useTranslations} from 'next-intl';
-import {Link} from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
+import { Element } from 'react-scroll';
+import Hero from '@/components/sections/Hero';
+import About from '@/components/sections/About';
+import Projects from '@/components/sections/Projects';
+import Contact from '@/components/sections/Contact';
+import { ThemeSwitcher } from '@/components/ThemeSwitcher';
+import { motion } from 'framer-motion';
 
 export default function HomePage() {
-    const t = useTranslations('HomePage');  
+  const t = useTranslations('HomePage');
+
   return (
-    <main className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 text-black dark:text-white">
+    <main>
       <motion.div
-        className="text-center space-y-4"
-        initial={{ opacity: 0, y: -20 }}   // 👈 position de départ
-        animate={{ opacity: 1, y: 0 }}     // 👈 position d'arrivée
-        transition={{ duration: 0.6 }}     // 👈 durée de l'animation
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.4 }}
       >
-        <motion.h1
-          className="text-4xl font-bold"
-          initial={{ scale: 0.8 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-        <div>
-        <h1>{t('title')}</h1>
-        <Link href="/about">{t('about')}</Link>
-        </div>
-        </motion.h1>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
-        >
-          <ThemeSwitcher />
-        </motion.div>
+        <ThemeSwitcher />
       </motion.div>
+      <Element name="hero">
+        <Hero />
+      </Element>
+      <Element name="about">
+        <About />
+      </Element>
+      <Element name="projects">
+        <Projects />
+      </Element>
+      <Element name="contact">
+        <Contact />
+      </Element>
     </main>
-  )
+  );
 }
-

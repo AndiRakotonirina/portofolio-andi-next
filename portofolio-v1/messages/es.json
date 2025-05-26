@@ -1,4 +1,20 @@
 {
+  "Home": {
+    "hero": {
+      "title": "Bienvenido a mi portafolio",
+      "subtitle": "Desarrollador web apasionado por la tecnología moderna"
+    },
+    "about": {
+      "title": "Sobre mí",
+      "content": "Soy un desarrollador fullstack especializado en React, Next.js y Node.js, con pasión por el diseño limpio y las experiencias de usuario fluidas."
+    },
+    "projects": {
+      "title": "Mis proyectos"
+    },
+    "contact": {
+      "title": "Contacte con nosotros"
+    }
+  },
   "HomePage": {
     "title": "¡Hola, mundo!",
     "about": "Ir a la página Acerca de"
