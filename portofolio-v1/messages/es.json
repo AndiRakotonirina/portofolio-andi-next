@@ -2,7 +2,9 @@
   "Home": {
     "hero": {
       "title": "Bienvenido a mi portafolio",
-      "subtitle": "Desarrollador web apasionado por la tecnología moderna"
+      "subtitle": "Desarrollador web apasionado por la tecnología moderna",
+      "cta1": "Ver mis proyectos",
+      "cta2": "Me contacter"
     },
     "about": {
       "title": "Sobre mí",

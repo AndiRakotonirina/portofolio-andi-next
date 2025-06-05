@@ -2,7 +2,9 @@
   "Home": {
     "hero": {
       "title": "Welcome to my portfolio",
-      "subtitle": "Web developer with a passion for modern technology"
+      "subtitle": "Web developer with a passion for modern technology",
+      "cta1": "See my projects",
+      "cta2": "Contact me"
     },
     "about": {
       "title": "About me",
