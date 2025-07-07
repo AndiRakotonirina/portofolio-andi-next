@@ -1,14 +1,16 @@
 {
   "Home": {
     "hero": {
-      "title": "Bienvenue sur mon portfolio",
-      "subtitle": "Développeur web passionné par les technologies modernes",
+      "title": "Andi Rakotonirina",
+      "subtitle": "Je transforme vos idées en solutions numériques concrètes : du concept à la réalisation, bien au-delà du code.",
       "cta1": "Voir mes projets",
       "cta2": "Me contacter"
     },
     "about": {
       "title": "À propos de moi",
-      "content": "Je suis un développeur fullstack spécialisé en React, Next.js et Node.js avec une passion pour le design épuré et les expériences utilisateur fluides."
+      "content": "Je suis Andi, développeur passionné basé à Madagascar, animé par l'envie de créer des expériences web fluides, accessibles et élégantes. Mon parcours atypique m’a appris à allier rigueur technique et sens du détail. Ce que je préfère ? Transformer une idée en une interface vivante qui parle à l’utilisateur.",
+      "content2":"Travailler avec Andi, c’est collaborer avec quelqu’un de fiable, curieux et toujours prêt à relever les défis. Son souci du détail et sa capacité à comprendre les besoins font vraiment la différence.",
+      "names": "Lead Developer chez la Société Malgache des Magasins"
     },
     "projects": {
       "title": "Mes projets"
@@ -20,7 +22,7 @@
   "HomePage": {
     "title": "Hello world!",
     "about": "Aller vers la page à propos"
-  },
+  }, 
   "LocaleLayout": {
     "title": "next-intl example"
   },

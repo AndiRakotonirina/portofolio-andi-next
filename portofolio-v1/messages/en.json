@@ -1,14 +1,16 @@
 {
   "Home": {
     "hero": {
-      "title": "Welcome to my portfolio",
-      "subtitle": "Web developer with a passion for modern technology",
+      "title": "Andi Rakotonirina",
+      "subtitle": "I transform your ideas into concrete digital solutions: from concept to realization, well beyond code.",
       "cta1": "See my projects",
       "cta2": "Contact me"
     },
     "about": {
       "title": "About me",
-      "content": "I'm a fullstack developer specializing in React, Next.js and Node.js with a passion for clean design and smooth user experiences."
+      "content": "I'm Andi, a passionate developer based in Madagascar, driven by the desire to create fluid, accessible and elegant web experiences. My atypical background has taught me to combine technical rigor and attention to detail. What do I like best? Transforming an idea into a living interface that speaks to the user.",
+      "content2": "Working with Andi means working with someone who is reliable, curious and always ready to take on a challenge. His attention to detail and ability to understand needs really make a difference.",
+      "names": "Lead Developer at Société Malgache des Magasins"
     },
     "projects": {
       "title": "My projects"
