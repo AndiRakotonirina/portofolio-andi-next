@@ -13,7 +13,7 @@ const About = () => {
   return (
     <section
       ref={ref}
-      className="min-h-screen bg-white dark:bg-gray-900 flex items-center justify-center px-4 py-16 text-foreground"
+      className="min-h-screen bg-white dark:bg-gray-900 flex justify-center px-4 py-16 text-foreground"
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}

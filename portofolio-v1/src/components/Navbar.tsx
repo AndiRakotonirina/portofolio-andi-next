@@ -21,7 +21,7 @@ const Navbar = () => {
           Mon Portfolio
         </div>
         <div className="flex items-center space-x-6">
-          {['hero', 'about', 'projects', 'contact'].map((section) => (
+          {['hero', 'about', 'skills', 'projects', 'contact'].map((section) => (
             <ScrollLink
               key={section}
               to={section}
