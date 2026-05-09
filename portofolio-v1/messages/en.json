@@ -4,7 +4,11 @@
       "title": "Andi Rakotonirina",
       "subtitle": "I transform your ideas into concrete digital solutions: from concept to realization, well beyond code.",
       "cta1": "See my projects",
-      "cta2": "Contact me"
+      "cta2": "Contact me",
+      "downloadCV": "Download CV",
+      "selectCVLanguage": "Choose CV language",
+      "selectCVMessage": "Select the language in which you want to download your CV.",
+      "cancel": "Cancel"
     },
     "about": {
       "title": "About me",

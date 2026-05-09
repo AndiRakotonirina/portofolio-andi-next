@@ -2,11 +2,38 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import { useState } from 'react';
 
 const Hero = () => {
   const t = useTranslations('Home.hero');
+  const locale = useLocale();
+  const [showModal, setShowModal] = useState(false);
 
+  const handleDownloadCV = () => {
+    if (locale === 'fr') {
+      downloadFile('cv_fr.pdf');
+    } else if (locale === 'en') {
+      downloadFile('cv_en.pdf');
+    } else {
+      // Pour les autres langues, afficher le modal
+      setShowModal(true);
+    }
+  };
+
+  const downloadFile = (filename) => {
+    const link = document.createElement('a');
+    link.href = `/${filename}`;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleSelectLanguage = (lang) => {
+    downloadFile(lang === 'fr' ? 'cv_fr.pdf' : 'cv_en.pdf');
+    setShowModal(false);
+  };
   // Variantes d’animation
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -53,7 +80,8 @@ const Hero = () => {
   };
 
   return (
-    <motion.section
+    <>
+      <motion.section
       className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-16 bg-gradient-to-br from-sky-100 to-slate-200 dark:from-black dark:to-slate-900"
       variants={containerVariants}
       initial="hidden"
@@ -107,14 +135,61 @@ const Hero = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={handleDownloadCV}
             className="border border-blue-600 text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition"
           >
-            {t('cta2')}
+            {t('downloadCV')}
           </motion.button>
         </motion.div>
       </motion.div>
     </motion.section>
-  );
+
+    {/* Modal */}
+    {showModal && (
+      <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.9 }}
+          className="bg-white dark:bg-gray-800 rounded-lg shadow-2xl p-6 max-w-md mx-auto"
+        >
+          <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
+            {t('selectCVLanguage')}
+          </h2>
+          <p className="text-gray-700 dark:text-gray-300 mb-6">
+            {t('selectCVMessage')}
+          </p>
+          <div className="flex gap-4 justify-end">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setShowModal(false)}
+              className="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+            >
+              {t('cancel')}
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => handleSelectLanguage('fr')}
+              className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
+            >
+              Français
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => handleSelectLanguage('en')}
+              className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
+            >
+              English
+            </motion.button>
+          </div>
+        </motion.div>
+      </div>
+    )}
+  </>
+);
 };
 
 export default Hero;

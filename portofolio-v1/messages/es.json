@@ -4,7 +4,11 @@
       "title": "Andi Rakotonirina",
       "subtitle": "Convierto sus ideas en soluciones digitales concretas: desde el concepto hasta la aplicación, pasando por el código.",
       "cta1": "Ver mis proyectos",
-      "cta2": "Me contacter"
+      "cta2": "Me contacter",
+      "downloadCV": "Descargar CV",
+      "selectCVLanguage": "Seleccionar idioma del CV",
+      "selectCVMessage": "Seleccione el idioma en el que desea descargar su CV.",
+      "cancel": "Cancelar"
     },
     "about": {
       "title": "Sobre mí",

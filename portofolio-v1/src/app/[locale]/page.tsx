@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Element } from 'react-scroll';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
-import Projects from '@/components/sections/Projects';
+import Course from '@/components/sections/Course';
 import Contact from '@/components/sections/Contact';
 import Skills from '@/components/sections/Skills';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
@@ -32,7 +32,7 @@ export default function HomePage() {
         <Skills />
       </Element>
       <Element name="projects">
-        <Projects />
+        <Course />
       </Element>
       <Element name="contact">
         <Contact />
